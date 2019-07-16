@@ -1,0 +1,25 @@
+ 
+Answer 1:
+$ touch emptyfile.txt
+$ mv emptyfile.txt .emptyfile.txt
+$ ls -a
+
+Answer 2:
+
+ $ cd 
+ $ pwd
+ $ /c/Users/unmesh
+ $ mkdir -p these/folders/are/just/for/fun       
+
+
+Answer 3:
+18 chracters but there are 15 letters, 1 space and 2 enter
+effect. When you use 'echo' command, the cursor jumps next line. 
+        
+        
+Answer 4: 
+$ echo -n "test" > fun 
+$ echo -n "another test" > fun
+$ cat fun
+Output
+$ testanother test
