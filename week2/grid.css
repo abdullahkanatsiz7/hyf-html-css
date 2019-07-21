@@ -46,9 +46,48 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: .1rem;
     font-size: 3vh;
+    line-height: 30px;
+    word-spacing: 5px;
+    margin: 10px 0;
 }
 
-section::after {
+p {
+    margin: 10px;
+    padding-top: 5px;
+    line-height: 30px;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+img {
+    width: 70%;
+}
+
+#grid-floats .grid-item:hover {
+    background-color: rgb(231, 231, 12);
+}
+
+.grid-floats{
+    float: left;
+    margin:0;
+    padding: 0;
+}
+
+#grid-floats .grid-item {
+    font-family: Roboto, sans-serif;
+    background-color: rgba(231, 231, 12, 0.774);
+    border-radius: 2%;
+    height: 600px;
+    text-align: center;
+    margin: 1.5rem;
+    float: left;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+}
+
+#grid-floats::after {
     content: "";
     display: block;
     clear: both;
@@ -56,122 +95,58 @@ section::after {
 
 @media screen and (min-width:1000px) {
     #grid-floats .grid-item {
-        font-family: Roboto, sans-serif;
-        background-color: rgba(231, 231, 12, 0.774);
-        border-radius: 2%;
-        width: calc(25% - 3rem);
-        height: 600px;
-        text-align: center;
-        margin: 1.5rem;
-        float: left;
-        line-height: 30px;
-        word-spacing: 5px;
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-        -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-    }
-    #grid-floats .grid-item:hover {
-        background-color: rgb(231, 231, 12);
-    }
-    #grid-floats .grid-item:nth-child(1) {
-        width: calc(50% - 3rem);
-    }
-    img {
-        width: 70%;
-    }
-    p {
-        margin: 2%;
-        padding-top: 5vh;
+       width: calc(25% - 3rem);
+    } 
+#grid-floats .grid-item:nth-child(1) {
+       width: calc(50% - 3rem);
     }
 }
 
 @media screen and (min-width:700px) and (max-width: 999px) {
     #grid-floats .grid-item {
-        font-family: Roboto, sans-serif;
-        background-color: rgba(231, 231, 12, 0.774);
-        border-radius: 2%;
-        width: calc(100%/3 - 3rem);
-        height: 600px;
-        text-align: center;
-        margin: 1.5rem;
-        float: left;
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-        -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+       width: calc(100%/3 - 3rem);
     }
     #grid-floats .grid-item:nth-child(-n+2) {
-        width: calc(50% - 3rem);
-    }
-    #grid-floats .grid-item:hover {
-        background-color: rgb(231, 231, 12);
-    }
-    img {
-        width: 70%;
-    }
-    p {
-        margin: 2%;
-        padding-top: 5vh;
+       width: calc(50% - 3rem);
     }
 }
 
-@media screen and (max-width: 699px) {
+@media  (max-width: 699px) {
     #grid-floats .grid-item {
-        font-family: Roboto, sans-serif;
-        background-color: rgba(231, 231, 12, 0.774);
-        border-radius: 2%;
-        width: calc(50% - 3rem);
-        height: 600px;
-        text-align: center;
-        margin: 1.5rem;
-        float: left;
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-        -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-    }
-    #grid-floats .grid-item:nth-child(1) {
-        width: calc(100% - 3rem);
-    }
-    #grid-floats .grid-item:hover {
-        background-color: rgb(231, 231, 12);
-    }
-    img {
-        width: 70%;
-    }
-    p {
-        margin: 2%;
-        padding-top: 5vh;
-    }
-}
-
-@media screen and (min-width:1000px) {
-    #grid-flex {
+       width: calc(50% - 3rem);
+    }  
+} 
+#grid-flex {
         display: flex;
         flex-flow: row wrap;
-    }
+        margin:16px 0;
+        padding: 0 0 0 40px;
+}
+#grid-flex .grid-item {
+    display: flex;
+    justify-content: space-around;
+    font-family: Roboto, sans-serif;
+    align-items: center;
+    height: 600px;
+    margin: 1.5rem;
+    flex-flow: column wrap;
+    border-radius: 2%;
+    background-color: rgba(231, 231, 12, 0.774);
+    line-height: 30px;
+    word-spacing: 5px;
+    color: rgba(20, 20, 20, 0.972);
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
+}
+#grid-flex .grid-item:hover {
+    background-color: rgb(231, 231, 12);
+}
+
+@media (min-width:1000px) {
     #grid-flex .grid-item {
-        display: flex;
-        justify-content: space-around;
-        font-family: Roboto, sans-serif;
-        align-items: center;
-        height: 600px;
         width: calc(25% - 3rem);
-        margin: 1.5rem;
-        flex-flow: column wrap;
-        border-radius: 2%;
-        background-color: rgba(231, 231, 12, 0.774);
-        line-height: 30px;
-        word-spacing: 5px;
-        color: rgba(20, 20, 20, 0.972);
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-        -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-    }
-    #grid-flex .grid-item:hover {
-        background-color: rgb(231, 231, 12);
     }
     #grid-flex .grid-item:nth-child(1) {
         width: calc(50% - 3rem);
@@ -179,28 +154,8 @@ section::after {
 }
 
 @media screen and (min-width:700px) and (max-width: 999px) {
-    #grid-flex {
-        display: flex;
-        flex-flow: row wrap;
-    }
     #grid-flex .grid-item {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-family: Roboto, sans-serif;
-        height: 600px;
         width: calc(100%/3 - 3rem);
-        margin: 1.5rem;
-        flex-flow: column wrap;
-        border-radius: 2%;
-        background-color: rgba(231, 231, 12, 0.774);
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-        -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-    }
-    #grid-flex .grid-item:hover {
-        background-color: rgb(231, 231, 12);
     }
     #grid-flex .grid-item:nth-child(-n+2) {
         width: calc(50% - 3rem);
@@ -208,28 +163,8 @@ section::after {
 }
 
 @media screen and ( max-width: 699px) {
-    #grid-flex {
-        display: flex;
-        flex-flow: row wrap;
-    }
     #grid-flex .grid-item {
-        display: flex;
-        justify-content: space-around;
-        font-family: Roboto, sans-serif;
-        align-items: center;
-        height: 600px;
         width: calc(50% - 3rem);
-        margin: 1.5rem;
-        flex-flow: column wrap;
-        border-radius: 2%;
-        background-color: rgba(231, 231, 12, 0.774);
-        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-        -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
-    }
-    #grid-flex .grid-item:hover {
-        background-color: rgb(231, 231, 12);
     }
     #grid-flex .grid-item:nth-child(1) {
         width: calc(100% - 3rem);
