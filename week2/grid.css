@@ -67,9 +67,9 @@ img {
     background-color: rgb(231, 231, 12);
 }
 
-.grid-floats{
+#grid-floats{
     float: left;
-    margin:0;
+    margin:16px 0;
     padding: 0;
 }
 
@@ -120,7 +120,7 @@ img {
         display: flex;
         flex-flow: row wrap;
         margin:16px 0;
-        padding: 0 0 0 40px;
+        padding: 0;
 }
 #grid-flex .grid-item {
     display: flex;
