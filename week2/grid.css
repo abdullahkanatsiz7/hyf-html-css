@@ -112,6 +112,9 @@ section::after {
 }
 
 @media  (max-width: 699px) {
+     #grid-floats .grid-item:nth-child(1) {
+        width: calc(100% - 3rem);
+     }  
     #grid-floats .grid-item {
        width: calc(50% - 3rem);
     }  
