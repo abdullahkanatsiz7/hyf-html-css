@@ -3,13 +3,17 @@ body {
     background-image: url(https://main-designyoutrust.netdna-ssl.com/wp-content/uploads/2019/03/10-39.jpg?iv=74);
     background-attachment: fixed;
     background-size: cover;
+    background-position: center center;
+}
+
+header {
+    height: 100%;
 }
 
 h1 {
     text-align: center;
-    font-size: 27vh;
     height: 65vh;
-    letter-spacing: .6rem;
+    letter-spacing: .4rem;
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(231, 231, 12, 0.863);
     animation-duration: 3s;
@@ -35,7 +39,7 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(231, 231, 12, 0.863);
     margin: 0;
-    letter-spacing: .5rem;
+    letter-spacing: .4rem;
     font-size: 8vh;
     margin: 2.5rem 0 2.5rem 0;
     padding: .75rem 0 .75rem 0;
@@ -54,9 +58,20 @@ h3 {
 p {
     margin: 10px;
     padding-top: 5px;
-    line-height: 30px;
     word-spacing: 5px;
     text-align: center;
+}
+
+@media (min-width:1000px) {
+    p {
+        line-height: 30px;
+    }
+}
+
+@media (max-width:1000px) {
+    p {
+        line-height: normal;
+    }
 }
 
 img {
@@ -67,7 +82,7 @@ img {
     background-color: rgb(231, 231, 12);
 }
 
-#grid-floats{
+#grid-floats {
     float: left;
     margin: 16px 0;
     padding: 0;
@@ -79,7 +94,6 @@ img {
     border-radius: 2%;
     height: 600px;
     text-align: center;
-    margin: 1.5rem;
     float: left;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     -webkit-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
@@ -95,43 +109,59 @@ section::after {
 
 @media screen and (min-width:1000px) {
     #grid-floats .grid-item {
-       width: calc(25% - 3rem);
-    } 
-#grid-floats .grid-item:nth-child(1) {
-       width: calc(50% - 3rem);
+        width: calc(25% - 2*1.5rem);
+        margin: 1.5rem;
+    }
+    #grid-floats .grid-item:nth-child(1) {
+        width: calc(50% - 2*1.5rem);
+        margin: 1.5rem;
+    }
+    h1 {
+        font-size: 27vh;
     }
 }
 
-@media screen and (min-width:700px) and (max-width: 999px) {
+@media screen and (min-width:600px) and (max-width: 999px) {
     #grid-floats .grid-item {
-       width: calc(100%/3 - 3rem);
+        width: calc(100%/3 - 2*1.5rem);
+        margin: 1.5rem;
     }
     #grid-floats .grid-item:nth-child(-n+2) {
-       width: calc(50% - 3rem);
+        width: calc(50% - 2*1.5rem);
+        margin: 1.5rem;
+    }
+    h1 {
+        font-size: 27vh;
     }
 }
 
-@media  (max-width: 699px) {
-     #grid-floats .grid-item:nth-child(1) {
-        width: calc(100% - 3rem);
-     }  
+@media (max-width: 599px) {
+    #grid-floats .grid-item:nth-child(1) {
+        width: calc(100% - 2*5px);
+        margin: 5px;
+    }
     #grid-floats .grid-item {
-       width: calc(50% - 3rem);
-    }  
-} 
-#grid-flex {
-        display: flex;
-        flex-flow: row wrap;
-        margin:16px 0;
-        padding: 0;
+        width: calc(50% - 2*5px);
+        margin: 5px;
+    }
+    h1 {
+        font-size: 15vh;
+    }
 }
+
+#grid-flex {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 16px 0;
+    padding: 0;
+}
+
 #grid-flex .grid-item {
     display: flex;
     justify-content: space-around;
     font-family: Roboto, sans-serif;
     align-items: center;
     height: 600px;
-    margin: 1.5rem;
     flex-flow: column wrap;
     border-radius: 2%;
     background-color: rgba(231, 231, 12, 0.774);
@@ -143,33 +173,40 @@ section::after {
     -moz-box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.75);
 }
+
 #grid-flex .grid-item:hover {
     background-color: rgb(231, 231, 12);
 }
 
 @media (min-width:1000px) {
     #grid-flex .grid-item {
-        width: calc(25% - 3rem);
+        width: calc(25% - 2*1.5rem);
+        margin: 1.5rem;
     }
     #grid-flex .grid-item:nth-child(1) {
-        width: calc(50% - 3rem);
+        width: calc(50% - 2*1.5rem);
+        margin: 1.5rem;
     }
 }
 
-@media screen and (min-width:700px) and (max-width: 999px) {
+@media screen and (min-width:600px) and (max-width: 999px) {
     #grid-flex .grid-item {
-        width: calc(100%/3 - 3rem);
+        width: calc(100%/3 - 2*1.5rem);
+        margin: 1.5rem;
     }
     #grid-flex .grid-item:nth-child(-n+2) {
-        width: calc(50% - 3rem);
+        width: calc(50% - 2*1.5rem);
+        margin: 1.5rem;
     }
 }
 
-@media screen and ( max-width: 699px) {
+@media screen and ( max-width: 599px) {
     #grid-flex .grid-item {
-        width: calc(50% - 3rem);
+        width: calc(50% - 2*5px);
+        margin: 5px;
     }
     #grid-flex .grid-item:nth-child(1) {
-        width: calc(100% - 3rem);
+        width: calc(100% - 2*5px);
+        margin: 5px;
     }
 }
