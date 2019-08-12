@@ -528,11 +528,11 @@ a.design:hover {
 }
 
 #search form.example input[type=text] {
-    width: 87, 5%;
+    width: 87.5%;
 }
 
 #search form.example button {
-    width: 12, 5%;
+    width: 12.5%;
 }
 
 @media (min-width: 1200px) {
@@ -556,10 +556,10 @@ a.design:hover {
         font: 20.25px"RO Sans", Calibri, sans-serif;
     }
     #search form.example input[type=text] {
-        width: 87, 5%;
+        width: 87.5%;
     }
     #search form.example button {
-        width: 12, 5%;
+        width: 12.5%;
     }
     .slide {
         min-height: 330px;
